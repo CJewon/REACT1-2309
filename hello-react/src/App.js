@@ -1,6 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
 import './css/socar.css';
+import './css/reset.css';
+
+import image from './image/usp_c.jpg';
+import State from './State';
+
 
 const 제목임 = <h1>이게 바로 제목이지</h1>;
 
@@ -111,7 +116,7 @@ function App() {
                           10분 단위로 원하는 만큼만 이용하세요.
                       </p>
                       <figure>
-                          <img src="image/usp_c.jpg" alt="차 옆에 서있는 남자가 싱글벙글 웃는 사진" />
+                          <img src={image} alt="차 옆에 서있는 남자가 싱글벙글 웃는 사진" />
                       </figure>
                   </div>
                   <div className="advantage">
@@ -281,6 +286,8 @@ function App() {
               </figure>
               <p>쏘카 앱 다운로드</p>
            </section>
+
+           <State></State>
 
 
 
