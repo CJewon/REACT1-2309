@@ -23,8 +23,12 @@ export default function State() {
         <button onClick={changeToggle}>토글버튼</button>
 
         {/* 숙제 */}
-        {/* 인폿에 글씨를 입력하면 */}
-        input
+        {/* 인풋에 글씨를 입력하면 */}
+       <input type="text" />
+       {/* p태그 안에 입력한 텍스트가 그대로 출력되게 만들어주세요*/}
+        <p className="your-input">
+            당신의 입력 : {}
+        </p> 
         
 
     </div>
