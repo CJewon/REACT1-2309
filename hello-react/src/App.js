@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import './socar.css';
 
 
 const 제목임 = <h1>이게 바로 제목이지</h1>;
