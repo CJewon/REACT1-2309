@@ -24,7 +24,8 @@ export default function State() {
 
         {/* 숙제 */}
         {/* 인폿에 글씨를 입력하면 */}
-        <input type="text" value onChange={변했을때}></input>
+        input
+        
 
     </div>
   )
