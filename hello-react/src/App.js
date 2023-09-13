@@ -1,7 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import './socar.css';
-
+import './css/socar.css';
 
 const 제목임 = <h1>이게 바로 제목이지</h1>;
 
@@ -24,10 +23,8 @@ function App() {
                      
                       <svg version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg"
                           xmlnsxlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 160.2 32.5"
-                          style="enable-background:new 0 0 160.2 32.5;" xmlspace="preserve">
-                          <style type="text/css">
+                          >
 
-                          </style>
                           <g>
                               <g>
                                   <path className="st0"
@@ -265,8 +262,7 @@ function App() {
               <figure className="app-icon">
                   
                   <svg xmlns="http://www.w3.org/2000/svg" xmlnsxlink="http://www.w3.org/1999/xlink" version="1.1" id="레이어_1"
-                      x="0px" y="0px" viewBox="0 0 158.3 158.3" style="enable-background:new 0 0 158.3 158.3;"
-                      xmlspace="preserve">
+                      x="0px" y="0px" viewBox="0 0 158.3 158.3"       xmlspace="preserve">
                       <rect x="0" fill="#FFFFFF"  width="158.3" height="158.3" />
                       <g>
                           <g>
