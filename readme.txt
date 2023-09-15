@@ -15,4 +15,4 @@ node 설치확인
         cd 폴더이름 : 폴더로 진입
         dir : 현재위치에 있는 폴더 목록 확인
 
-state란 ?
+rfc : react function component

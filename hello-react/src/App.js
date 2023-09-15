@@ -5,7 +5,7 @@ import './css/reset.css';
 
 import image from './image/usp_c.jpg';
 import State from './State.js';
-
+import Eventedu from './Eventedu';
 
 const 제목임 = <h1>이게 바로 제목이지</h1>;
 

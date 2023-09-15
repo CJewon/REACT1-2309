@@ -8,10 +8,10 @@ export default function State() {
 
     const [isOn, setInOn] = useState(false);
 
-    // function changeToggle() {
-    //     setInOn(!isOn);
-    //     console.log(`isOn : ${isOn}`);
-    // }
+    function changeToggle() {
+        setInOn(!isOn);
+        console.log(`isOn : ${isOn}`);
+    }
 
     const [inputText, inputState] = useState('');
 
@@ -23,11 +23,11 @@ export default function State() {
  
   return (
     <div>
-        {/* {count}
+        {count}
         <button onClick={ () => {setCount(count + 10)}}>올려</button>
 
         <p>현재 온오프 상태 : { isOn ? 'On' : 'OFF' }</p>
-        <button onClick={changeToggle}>토글버튼</button> */}
+        <button onClick={changeToggle}>토글버튼</button>
 
         {/* 숙제 */}
         {/* 인풋에 글씨를 입력하면 */}
