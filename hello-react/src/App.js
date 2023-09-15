@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import './css/socar.css';
 import './css/reset.css';
@@ -6,25 +6,28 @@ import './css/reset.css';
 import image from './image/usp_c.jpg';
 import State from './State.js';
 import Eventedu from './Eventedu';
+import { useState } from 'react';
 
-const 제목임 = <h1>이게 바로 제목이지</h1>;
 
-let 컨텐츠임 = <p></p>;
-for(let i = 0; i < 10; i++) {
-  컨텐츠임 += <p>{i}번 켄턴츠임</p>
-}
 
 // 리엑트에서 for문으로 컨텐츠 만드는건 권장x
 // 리엑트에서 /(닫는태그)가 필수 !!!
 
 function App() {
+
+    const [headText, setHead] = useState("24시간 언제나")
+
+    function handleHead() {
+        setHead('클릭된 제목입니다.')
+    }
+
   return (
   <div className="App">
       <body>
           <header>
               <div className="header-inner">
                   <h1>
-                      <a href="#"><span className="hidden">SOCAR</span></a>
+                      <a href="#!"><span className="hidden">SOCAR</span></a>
                      
                       <svg version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg"
                           xmlnsxlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 160.2 32.5"
@@ -51,24 +54,24 @@ function App() {
                           </g>
                       </svg>
                   </h1>
-                  <a href="#" className="hamberger"><span className="hidden">메뉴</span></a>
+                  <a href="#!" className="hamberger"><span className="hidden">메뉴</span></a>
               </div>
               <div className="hamberger-click">
                   <nav className="hamberger-nav">
                       <div>
-                          <a href="#">이용 안내</a>
-                          <a href="#">요금 안내</a>
-                          <a href="#">혜택 안내</a>
-                          <a href="#">쏘카존 개설 신청</a>
+                          <a href="#!">이용 안내</a>
+                          <a href="#!">요금 안내</a>
+                          <a href="#!">혜택 안내</a>
+                          <a href="#!">쏘카존 개설 신청</a>
                       </div>
                       <div>
-                          <a href="#">쏘카의 서비스</a>
-                          <a href="#">쏘카 비즈니스</a>
-                          <a href="#">쏘카 플랜</a>
+                          <a href="#!">쏘카의 서비스</a>
+                          <a href="#!">쏘카 비즈니스</a>
+                          <a href="#!">쏘카 플랜</a>
                       </div>
                       <div>
-                          <a href="#">회사소개</a>
-                          <a href="#">공고</a>
+                          <a href="#!">회사소개</a>
+                          <a href="#!">공고</a>
                       </div>
                   </nav>
               </div>
@@ -80,10 +83,13 @@ function App() {
                   모든 순간, 쏘카
               </h2>
           </section>
+
+          <Eventedu></Eventedu>
+
           <main>
               <section id="advantages-container">
                   <div className="advantage">
-                      <h2>24시간 언제나</h2>
+                      <h2 onClick={handleHead}>{headText}</h2>
                       <p>
                           한밤중이나 주말에도 스마트폰으로
                           <br/>
@@ -151,7 +157,7 @@ function App() {
           <footer>
               <div className="footer-container">
                   <div className="sns-container">
-                      <a href="#">
+                      <a href="#!">
                           <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33">
                               <g id="그룹_553" data-name="그룹 553" transform="translate(5481 -4830)">
                                   <g id="그룹_502" data-name="그룹 502" transform="translate(-5544 -93)">
@@ -177,7 +183,7 @@ function App() {
                               </g>
                           </svg>
                       </a>
-                      <a href="#">
+                      <a href="#!">
                           <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33">
                               <g id="그룹_554" data-name="그룹 554" transform="translate(5481 -4768.192)">
                                   <g id="그룹_109" data-name="그룹 109" transform="translate(-5480.346 4769)">
@@ -195,7 +201,7 @@ function App() {
                               </g>
                           </svg>
                       </a>
-                      <a href="#">
+                      <a href="#!">
                           <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33">
                               <g id="그룹_555" data-name="그룹 555" transform="translate(5488 -4905.192)">
                                   <g id="그룹_110" data-name="그룹 110" transform="translate(-5486.692 4906)">
@@ -212,7 +218,7 @@ function App() {
                               </g>
                           </svg>
                       </a>
-                      <a href="#">
+                      <a href="#!">
                           <svg xmlns="http://www.w3.org/2000/svg" width="33.192" height="33.192" viewBox="0 0 33.192 33.192">
                               <g id="그룹_556" data-name="그룹 556" transform="translate(5425 -4952)">
                                   <g id="그룹_26" data-name="그룹 26" transform="translate(-5424 4953)">
@@ -228,15 +234,15 @@ function App() {
                       </a>
                   </div>
                   <nav>
-                      <a href="#">회사소개</a>
-                      <a href="#">인재채용</a>
-                      <a href="#">나눔카</a>
-                      <a href="#">이용약관</a>
-                      <a href="#" className="important-information">개인정보처리방침</a>
-                      <a href="#" className="important-information">위치정보 이용약관</a>
-                      <a href="#" className="important-information">차량손해면책제도</a>
-                      <a href="#">고객센터</a>
-                      <a href="#">제휴 문의</a>
+                      <a href="#!">회사소개</a>
+                      <a href="#!">인재채용</a>
+                      <a href="#!">나눔카</a>
+                      <a href="#!">이용약관</a>
+                      <a href="#!" className="important-information">개인정보처리방침</a>
+                      <a href="#!" className="important-information">위치정보 이용약관</a>
+                      <a href="#!" className="important-information">차량손해면책제도</a>
+                      <a href="#!">고객센터</a>
+                      <a href="#!">제휴 문의</a>
                   </nav>
                   <div className="information">
                       <div>
@@ -254,7 +260,7 @@ function App() {
                           </dl>
                       </div>
                       <div>
-                          <p>(주)쏘카 통신판매업 <a href="#" className="biz-info">사업자정보 확인</a></p>
+                          <p>(주)쏘카 통신판매업 <a href="#!" className="biz-info">사업자정보 확인</a></p>
                           <p>신고: 제 2019-제주오라-3호, 사업자등록번호: 616-81-90529, 대표자: 박재욱</p>
                           <p>© 2019 SOCAR All rights reserved.</p>
                       </div>
@@ -262,7 +268,7 @@ function App() {
               </div>
              </footer>
             <section id="app-download">
-              <a href="#" className="unit-link"></a>
+              <a href="#!" className="unit-link"></a>
               <div className="incline"></div>
               <figure className="app-icon">
                   
@@ -288,6 +294,7 @@ function App() {
            </section>
 
            <State></State>
+           
 
 
 

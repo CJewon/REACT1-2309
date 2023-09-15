@@ -19,16 +19,26 @@ export default function Eventedu() {
     // 사용자 정의 이벤트 : 아래 형태를 이용해 새로운 이벤트 객체 생성 가능..한데 우리가 슬일이 언제 있으련지?
     // const myEvent = new Event('custom');
 
-    const [MouseEnterText, MouseEnterState] = useState('지금 내 위에 마우스가 있어요');
+    const [isEnter, setIsEnter] = useState(false);
 
-    const [MouseLeaveText, MouseLeaveState] = useState('내 위에는 마우스가 없어요');    
+    function handleEnterMouse() {
+      setIsEnter(true);
+    }
+
+    function handleLeaveMouse() {
+      setIsEnter(false);
+    }
+
+       
 
   return (
     <div>
         
         {/* 마우스를 올리면 "지금 내 위에 마우스가 있어요" */}
         {/* 마우스를 밖으로 나가면 "내 위에는 마우스가 없어요" 라고 하단 p태그에 출력되도록 만들어봅시다!*/}
-        <p onMouseEnter={MouseEnterText} onMouseLeave={MouseLeaveText}></p>
+        <p onMouseEnter={handleEnterMouse} onMouseLeave={handleLeaveMouse}>
+          {isEnter ? "지금 내 위에 마우스가 있어요" : "내 위에는 마우스가 없어요"}
+        </p>
 
 
     </div>
