@@ -1,3 +1,4 @@
+import { on } from 'events';
 import React, {useState} from 'react'
 
 export default function State() {
@@ -7,28 +8,37 @@ export default function State() {
 
     const [isOn, setInOn] = useState(false);
 
-    function changeToggle() {
-        setInOn(!isOn);
-        console.log(`isOn : ${isOn}`);
+    // function changeToggle() {
+    //     setInOn(!isOn);
+    //     console.log(`isOn : ${isOn}`);
+    // }
+
+    const [inputText, inputState] = useState('');
+
+    const onChange = (e) => {
+      inputState(e.target.value);
     }
 
     
  
   return (
     <div>
-        {count}
+        {/* {count}
         <button onClick={ () => {setCount(count + 10)}}>올려</button>
 
         <p>현재 온오프 상태 : { isOn ? 'On' : 'OFF' }</p>
-        <button onClick={changeToggle}>토글버튼</button>
+        <button onClick={changeToggle}>토글버튼</button> */}
 
         {/* 숙제 */}
         {/* 인풋에 글씨를 입력하면 */}
-       <input type="text" />
+       <input type="text" onChange={onChange} value={inputText} />
        {/* p태그 안에 입력한 텍스트가 그대로 출력되게 만들어주세요*/}
         <p className="your-input">
-            당신의 입력 : {}
+            당신의 입력 : {inputText}
         </p> 
+        
+      
+      
         
 
     </div>
