@@ -7,6 +7,8 @@ import image from './image/usp_c.jpg';
 import State from './State.js';
 import Eventedu from './Eventedu';
 import { useState } from 'react';
+import ForCom from './ForCom';
+import MeatLove from './MeatLove';
 
 
 
@@ -15,7 +17,27 @@ import { useState } from 'react';
 
 function App() {
 
-    const [headText, setHead] = useState("24시간 언제나")
+    const [headText, setHead] = useState("24시간 언제나");
+
+    const 반복컴포넌트 = [];
+
+    const 고기목록 = ['닭', '소', '돼지', '양', '오리', '물'];
+
+    for(let i = 0; i++ ; i <10) {
+        반복컴포넌트.push(<ForCom index={i+1}></ForCom>)
+    }
+
+    let test = '';
+
+    const 고기맵 = 고기목록.map((고기)=>{
+        return(
+            <MeatLove 고기종류={고기}></MeatLove>
+            )
+    })
+
+    console.log(test)
+
+
 
     function handleHead() {
         setHead('클릭된 제목입니다.')
@@ -84,7 +106,32 @@ function App() {
               </h2>
           </section>
 
+          <hr />
+          <hr />
+          <hr />
+
+
           <Eventedu></Eventedu>
+          <hr />
+          <hr />
+          <hr />
+          <hr />
+          <hr />
+          <hr />
+          <MeatLove></MeatLove>
+
+          {
+              고기목록.map((고기)=>
+                 (
+                      <MeatLove 고기종류={고기}></MeatLove>
+                      )
+                    )
+                }
+
+
+
+          {/* 배열.map(처리방법) */}
+          
 
           <main>
               <section id="advantages-container">
@@ -241,7 +288,9 @@ function App() {
                       <a href="#!" className="important-information">개인정보처리방침</a>
                       <a href="#!" className="important-information">위치정보 이용약관</a>
                       <a href="#!" className="important-information">차량손해면책제도</a>
-                      <a href="#!">고객센터</a>
+                      <a href="#!">고객센터</a>import ClassComp2 from './ClassComp2';
+import ForCom from './ForCom';
+
                       <a href="#!">제휴 문의</a>
                   </nav>
                   <div className="information">
