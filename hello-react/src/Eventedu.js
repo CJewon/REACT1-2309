@@ -40,6 +40,8 @@ export default function Eventedu() {
           {isEnter ? "지금 내 위에 마우스가 있어요" : "내 위에는 마우스가 없어요"}
         </p>
 
+        {/*  */}
+
 
     </div>
   )
