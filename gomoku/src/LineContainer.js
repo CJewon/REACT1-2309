@@ -14,6 +14,5 @@ export default function LineContainer(props) {
 
     return tableInner;
   }
-
   return <table className="line-container">{makeGrid(props.칸수 - 1)}</table>;
 }
